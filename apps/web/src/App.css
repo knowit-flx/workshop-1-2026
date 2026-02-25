@@ -1,0 +1,241 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  height: 100vh;
+  height: 100dvh;
+  padding: 18px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brandMark {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.14);
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 680;
+  letter-spacing: 0.2px;
+}
+
+.brandTag {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  user-select: none;
+}
+
+.toggle input {
+  width: 16px;
+  height: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.transcript {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background:
+    radial-gradient(900px 320px at 12% 0%, rgba(16, 185, 129, 0.08), transparent 60%),
+    radial-gradient(800px 300px at 90% 20%, rgba(14, 165, 233, 0.07), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.85));
+}
+
+.empty {
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.emptyTitle {
+  font-weight: 680;
+}
+
+.emptyBody {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.msg {
+  display: grid;
+  gap: 6px;
+}
+
+.msgMeta {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.msgBubble {
+  border-radius: 14px;
+  padding: 12px 12px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.msg--user {
+  align-self: flex-end;
+  max-width: 78ch;
+}
+
+.msg--user .msgBubble {
+  background: rgba(16, 185, 129, 0.11);
+  border-color: rgba(16, 185, 129, 0.22);
+}
+
+.msg--assistant {
+  align-self: flex-start;
+  max-width: 78ch;
+}
+
+.msg--assistant .msgBubble {
+  background: rgba(14, 165, 233, 0.09);
+  border-color: rgba(14, 165, 233, 0.20);
+}
+
+.msg--system .msgBubble {
+  background: rgba(15, 23, 42, 0.05);
+}
+
+.loading {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 6px 2px;
+}
+
+.error {
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 12px 14px;
+  background: rgba(244, 63, 94, 0.07);
+}
+
+.errorTitle {
+  font-weight: 700;
+  color: rgb(159, 18, 57);
+}
+
+.errorBody {
+  margin-top: 4px;
+  color: rgb(136, 19, 55);
+  font-size: 13px;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  flex: 0 0 auto;
+}
+
+.composer textarea {
+  width: 100%;
+  min-width: 0;
+  resize: none;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  padding: 10px 12px;
+  font: inherit;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.composer textarea:disabled {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.composer button {
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  padding: 10px 14px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.92), rgba(14, 165, 233, 0.88));
+  color: white;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hint {
+  padding: 0 14px 14px;
+  color: var(--muted);
+  font-size: 12px;
+  flex: 0 0 auto;
+}
+
+.composerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toggle--inComposer {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 520px) {
+  .composerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .composer button {
+    width: 100%;
+  }
+}
