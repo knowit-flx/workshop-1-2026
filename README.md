@@ -1,31 +1,19 @@
-# Workshop 1 (2026): Spec-Driven Development (PromptLab)
+# PromptLab (Clean Start)
 
-PromptLab is a minimal AI chat app used as the base for a spec-driven workshop. Your assignment is to use OpenSpec and/or Spec-Kit to plan and implement new features on top of the working baseline.
+This branch is a working baseline of PromptLab without any spec-driven tooling scaffolding (no OpenSpec / Spec-Kit setup).
 
-## Baseline App (Already Implemented)
+## What's Included
 
 - Web UI: single-page React chat
 - API: Express `POST /api/chat` that proxies OpenRouter
 - Shared types/contracts: `packages/shared`
 - Monorepo tooling: pnpm workspaces + Turborepo; `pnpm dev` runs web + api
 
-## Workshop Assignment
-
-Pick 1-2 features, drive the work with artifacts (OpenSpec and/or Spec-Kit), then implement.
-
-Feature suggestions:
-- Chat session history (create/list/open/continue; optional file persistence)
-- Streaming replies (SSE / token-by-token UI)
-- Model switcher (pick model per chat/session)
-
 ## Prereqs
 
 - Node.js 20+
 - pnpm
-- A coding agent/tooling in your editor (Copilot, Codex, KiloCode, etc.)
-- An OpenRouter API key _(will be shared during the workshop)_
-- Spec-Kit (Specify CLI): https://github.com/github/spec-kit
-- OpenSpec CLI: https://github.com/Fission-AI/OpenSpec
+- An OpenRouter API key
 
 ## Setup
 
@@ -66,19 +54,10 @@ VITE_API_PORT=8799
 - `apps/api` - Express + TypeScript
 - `packages/shared` - shared TypeScript types (contracts + domain models)
 
-## Workshop Flow (Suggested)
+## Notes
 
-1) Choose a feature (sessions, streaming, model switcher)
-2) Produce artifacts (proposal/specs/tasks) using OpenSpec and/or Spec-Kit
-3) Implement in small steps; keep the app working
-4) Verify with `pnpm typecheck`, `pnpm build`, and a manual test
-
-## Spec Driven Develpment Tools
-
-- [Get started with OpenSpec](https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md)
-- [Get stated with Spec-Kit](https://github.com/github/spec-kit?tab=readme-ov-file#-get-started)
-
-> ℹ️ The init process is already done, if you want to test and set it up yourself, use branch `clean-start`
+- The web dev server proxies `/api/*` to the API server.
+- See `main` for the spec-driven workshop setup.
 
 ## Troubleshooting
 
