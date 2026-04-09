@@ -21,6 +21,15 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    test: {
+      environment: "jsdom",
+      coverage: {
+        provider: "v8",
+        reportsDirectory: "./coverage",
+        reporter: ["text", "json-summary", "html"],
+        include: ["src/App.tsx"]
+      }
+    },
     server: {
       port: webPort,
       proxy: {
