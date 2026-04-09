@@ -8,15 +8,27 @@ importers:
 
   .:
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.39.1
+        version: 9.39.3
       '@vitest/coverage-v8':
         specifier: ^3.2.4
         version: 3.2.4(vitest@3.2.4(@types/node@24.10.13)(jsdom@27.4.0)(tsx@4.21.0))
+      eslint:
+        specifier: ^9.39.1
+        version: 9.39.3
+      globals:
+        specifier: ^16.5.0
+        version: 16.5.0
       turbo:
         specifier: ^2.0.0
         version: 2.8.10
       typescript:
         specifier: ^5.5.0
         version: 5.9.3
+      typescript-eslint:
+        specifier: ^8.48.0
+        version: 8.56.1(eslint@9.39.3)(typescript@5.9.3)
 
   apps/api:
     dependencies:
