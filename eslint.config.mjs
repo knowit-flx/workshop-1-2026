@@ -16,7 +16,10 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
-      globals: globals.node
+      globals: globals.node,
+      parserOptions: {
+        tsconfigRootDir: import.meta.dirname
+      }
     }
   }
 ]);
